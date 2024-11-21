@@ -98,35 +98,39 @@
         <div class="col-lg-8">
           <form class="form-contact contact_form" action=""  id="submit-form" >
             <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                  
-                    <textarea class="form-control w-100" name="message" id="message-field" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Enter Message'></textarea>
-                    <p class="text-danger" id="messageError"></p>
-                </div>
-              </div>
+              
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="name" id="name-field" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Enter your name'>
+                  <input class="form-control border border-info rounded" name="name" id="name-field" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Enter your name'>
                   <p class="text-danger" id="nameError"></p>
                 </div>
               </div>
+
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="email" id="email-field" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
+                  <input class="form-control border border-info rounded" name="email" id="email-field" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
                   <p class="text-danger" id="emailError"></p>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <input class="form-control" name="subject" id="subject-field" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Enter Subject'>
+                  <input class="form-control border border-info" name="subject" id="subject-field" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Enter Subject'>
                   <p class="text-danger" id="subjectError"></p>
                 </div>
               </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  
+                    <textarea class="form-control w-100 border border-info" name="message" id="message-field" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Enter Message'></textarea>
+                    <p class="text-danger" id="messageError"></p>
+                </div>
+              </div>
+
             </div>
             <div class="form-group mt-3">
               <a href="landing.html" target="_blank">
-                <button type="submit" class="button button-contactForm btn_4 boxed-btn" target="_blank" >Send Message</button>
+                <button type="submit" class="button button-contactForm btn_4 boxed-btn rounded" target="_blank" >Send Message</button>
               </a>
             </div>
           </form>
@@ -285,11 +289,11 @@
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
-                alert("Form submitted successfully")
+                alert("Congrats! You started talking with SUJIN")
                 window.location.reload()
             },
             error:function (err){
-                alert("Something Error")
+                alert("oops! something wrong just happened")
   
             }
         })
